@@ -99,6 +99,9 @@ export function LocalSearchPage({
                   }
                 >
                   <option value="encosta">Subida de encosta</option>
+                  <option disabled>
+                    Subida de encosta com tentativas — indisponível
+                  </option>
                   <option value="tempera">Têmpera simulada</option>
                 </select>
               </label>
