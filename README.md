@@ -1,6 +1,10 @@
 ## Executar localmente
 
-Na raiz do projeto, prepare o ambiente Python (Python 3.10 ou superior):
+Antes de começar, instale o Python 3.10 ou superior, o Node.js e o npm.
+
+### Linux
+
+Na raiz do projeto, crie o ambiente virtual, instale as dependências e inicie a API:
 
 ```bash
 python3 -m venv .venv
@@ -9,9 +13,34 @@ python -m pip install -r backend/requirements-dev.txt
 python -m uvicorn backend.api_sistema:app --reload --host 127.0.0.1 --port 8000
 ```
 
-Em outro terminal:
+Em outro terminal, inicie o frontend:
 
 ```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Windows
+
+No PowerShell, a partir da raiz do projeto, crie o ambiente virtual, instale as dependências e inicie a API:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r backend/requirements-dev.txt
+python -m uvicorn backend.api_sistema:app --reload --host 127.0.0.1 --port 8000
+```
+
+Se estiver usando o Prompt de Comando (`cmd`) em vez do PowerShell, ative o ambiente com:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+Em outro PowerShell ou Prompt de Comando, inicie o frontend:
+
+```powershell
 cd frontend
 npm install
 npm run dev
